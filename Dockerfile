@@ -42,6 +42,7 @@ FROM node:alpine as runner
 COPY --from=builder /usr/src/app/dist /app/dist
 COPY --from=builder /usr/src/app/node_modules /app/node_modules
 
+RUN apk update && apk add curl wget drill
 RUN chown -R node:node /app
 
 USER node
