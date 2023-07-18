@@ -49,3 +49,4 @@ USER node
 EXPOSE 1234
 WORKDIR /app
 CMD node dist/js/server.js
+
